@@ -1,3 +1,8 @@
 import React from "react"
+import Tours from "./Tours"
 
-export default () => <div>Hello world!</div>
+export default () => (
+    <div>
+        <Tours />
+    </div>
+)
