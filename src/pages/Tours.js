@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
+import Layout from './components/Layout'
 
-class Tours extends Component {
+class tours extends Component {
     render() {
         return (
-            <div>
+            <Layout>
                 hello from tours page
-            </div>
+            </Layout>
         );
     }
 }
 
-export default Tours;
+export default tours;

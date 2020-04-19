@@ -1,8 +1,8 @@
 import React from "react"
-import Tours from "./Tours"
+import Layout from "./components/Layout"
 
 export default () => (
-    <div>
-        <Tours />
-    </div>
+    <Layout>
+        Hello world!
+    </Layout>
 )
