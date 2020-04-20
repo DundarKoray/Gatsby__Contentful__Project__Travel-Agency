@@ -3,23 +3,23 @@
   letter-spacing: var(--mainSpacing);
   color: var(--mainWhite);
 }
-.banner h1 {
+.banner-title {
   font-size: 3.3rem;
   text-transform: uppercase;
   margin-bottom: 2rem;
   padding: 0 1rem;
   letter-spacing: 6px;
 }
-.banner p {
+.banner.info {
   width: 85%;
   margin: 0 auto;
   margin-bottom: 2rem;
 }
 @media screen and (min-width: 768px) {
-  .banner h1 {
+  .banner-title {
     font-size: 4.5rem;
   }
-  .banner p {
+  .banner-info {
     width: 70%;
   }
 }
