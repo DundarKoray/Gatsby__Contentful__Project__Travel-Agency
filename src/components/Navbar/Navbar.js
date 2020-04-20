@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 import { Link } from 'gatsby';
-import styles from '../css/navbar.module.css';
+import styles from './navbar.module.css';
 import { FaAlignRight } from 'react-icons/fa';
-import links from '../constants/links'
-import socialIcons from '../constants/social-icons'
-import logo from '../images/logo.svg'
+import links from '../../constants/links'
+import socialIcons from '../../constants/social-icons'
+import logo from '../../images/logo.svg'
 
 const Navbar = () => {
     const [isOpen, setNav] = useState(false)
