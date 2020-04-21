@@ -18,3 +18,7 @@ export default Button
 // use vscode-styled-components extension made by Julien Poissonnier. This exentsion makes styled components look like normal css.
 
 // must install the package from gatsby and add into gatsby-config.js
+
+//Examples how to use button component
+//<Button big color="red">first button</Button>
+//<Button color="yellow">second button</Button>
