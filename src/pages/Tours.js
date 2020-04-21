@@ -7,7 +7,8 @@ class tours extends Component {
         return (
             <Layout>
                 <div>
-                    <Button>hello from styled</Button>
+                    <Button big color="red">first button</Button>
+                    <Button color="yellow">second button</Button>
                 </div>
             </Layout>
         );
