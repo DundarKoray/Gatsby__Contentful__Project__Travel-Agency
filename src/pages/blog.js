@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/Layout"
-import { graphql } from "gatsby"
+
 
 const blog = ({ data }) => {
     // console.log(props)
@@ -9,7 +9,7 @@ const blog = ({ data }) => {
   return (
     <Layout>
       hello from blog page
-      <h1>title: {data.site.siteMetadata.title}</h1>
+      
     </Layout>
   )
 }
