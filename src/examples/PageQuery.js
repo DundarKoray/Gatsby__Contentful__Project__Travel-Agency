@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../components/Layout"
 import { graphql } from "gatsby"
 
-const blog = ({ data }) => {
+const PageQuery = ({ data }) => {
     // console.log(props)
     // this data comes from props, console.log(props) to see
 
@@ -14,6 +14,16 @@ const blog = ({ data }) => {
   )
 }
 
+export const query = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+        description
+        author
+      }
+    }
+  }
+`
 
-
-export default blog
+export default PageQuery
