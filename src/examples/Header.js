@@ -2,6 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
 const Header = () => {
+    //with useStaticQuery we can place const data outside of Header component if we would like where it is not possible with StaticQuery
   const data = useStaticQuery(graphql`
     {
       site {
