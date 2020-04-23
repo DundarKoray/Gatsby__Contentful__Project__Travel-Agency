@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/Layout"
-
+import ImagePractice from '../examples/ImagePractice'
 
 const blog = ({ data }) => {
     // console.log(props)
@@ -9,7 +9,7 @@ const blog = ({ data }) => {
   return (
     <Layout>
       hello from blog page
-      
+      <ImagePractice/>
     </Layout>
   )
 }
