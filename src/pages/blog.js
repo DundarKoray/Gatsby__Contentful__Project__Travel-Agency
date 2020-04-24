@@ -1,6 +1,7 @@
 import React from "react"
 import Layout from "../components/Layout"
-import ImagePractice from '../examples/ImagePractice'
+import { graphql } from 'gatsby'
+import HeroStyled from '../components/HeroStyled/HeroStyled'
 
 const blog = ({ data }) => {
     // console.log(props)
@@ -9,11 +10,22 @@ const blog = ({ data }) => {
   return (
     <Layout>
       hello from blog page
-      <ImagePractice/>
+      
     </Layout>
   )
 }
 
-
-
 export default blog
+
+
+export const query = graphql`
+  query {
+    backgroundImage: file(relativePath: { eq: "defaultBcg.jpeg" }) {
+      childImageSharp {
+        fluid(quality: 90, maxWidth: 4600) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+  }
+`
