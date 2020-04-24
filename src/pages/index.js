@@ -1,6 +1,7 @@
 import React from "react"
 import Layout from "../components/Layout"
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 // import SimpleHero from "../components/SimpleHero/SimpleHero"
 import HeroStyled from "../components/HeroStyled/HeroStyled"
 import Banner from "../components/Banner/Banner"
@@ -15,9 +16,9 @@ export default (props) => (
         title="continue exploring"
         info="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
       >
-        <Link className="btn-white" to="/tours">
+        <AniLink fade className="btn-white" to="/tours">
           explore tours
-        </Link>
+        </AniLink>
       </Banner>
     </HeroStyled>
     <About />
