@@ -1,9 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 import BackgroundImage from "gatsby-background-image"
-import { graphql } from "gatsby"
-
-const getBackgroundImage = graphql
 
 const HeroStyled = ({ img, className, children, fullSize }) => {
   return (
@@ -14,11 +11,11 @@ const HeroStyled = ({ img, className, children, fullSize }) => {
 }
 
 export default styled(HeroStyled)`
-  min-height: ${props => (props.fullSize == 'true'
+  min-height: ${props => (props.fullSize === 'true'
       ? "calc(100vh - 62px)" 
       : "50vh")};
 
-  background: ${props => props.fullSize == 'true'
+  background: ${props => props.fullSize === 'true'
       ? "linear-gradient(rgba(63, 208, 212, 0.7), rgba(0, 0, 0, 0.7))"
       : "none"};
   background-position: center;
