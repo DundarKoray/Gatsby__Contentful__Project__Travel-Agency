@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../components/Layout"
 import { graphql } from "gatsby"
 import HeroStyled from "../components/HeroStyled/HeroStyled"
+import Contact from "../components/Contact/Contact"
 
 const contact = props => {
   // console.log(props.data)
@@ -11,6 +12,7 @@ const contact = props => {
         img={props.data.backgroundImage.childImageSharp.fluid}
         fullSize="false"
       />
+      <Contact />
     </Layout>
   )
 }

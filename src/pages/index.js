@@ -1,13 +1,12 @@
 import React from "react"
 import Layout from "../components/Layout"
-// import { Link } from "gatsby"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
 // import SimpleHero from "../components/SimpleHero/SimpleHero"
+import { graphql } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import HeroStyled from "../components/HeroStyled/HeroStyled"
 import Banner from "../components/Banner/Banner"
 import About from "../components/About/About"
 import Services from "../components/Services/Services"
-import { graphql } from "gatsby"
 
 export default (props) => (
   <Layout>
