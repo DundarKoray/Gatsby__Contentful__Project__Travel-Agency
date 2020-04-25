@@ -1,9 +1,9 @@
-import React, { Component } from "react"
+import React from "react"
 import Layout from "../components/Layout"
 import { graphql } from "gatsby"
 import HeroStyled from "../components/HeroStyled/HeroStyled"
 
-const tours = props => {
+const tours = (props) => {
   return (
     <Layout>
       <HeroStyled
