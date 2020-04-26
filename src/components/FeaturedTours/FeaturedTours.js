@@ -1,11 +1,52 @@
-import React from 'react';
+import React from "react"
+import Tour from "../Tours/Tour"
+import TitleStyled from "../TitleStyled/TitleStyled"
+import styles from "./featuredTours.module.css"
+import { useStaticQuery, graphql } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
+
+const getFeaturedTours = graphql`
+  query {
+    featuredTours: allContentfulTour(filter: { featured: { eq: true } }) {
+      edges {
+        node {
+          name
+          price
+          slug
+          country
+          contentful_id
+          days
+          start
+          images {
+            fluid {
+              ...GatsbyContentfulFluid_tracedSVG
+            }
+          }
+        }
+      }
+    }
+  }
+`
 
 const FeaturedTours = () => {
-    return (
-        <div>
-            
-        </div>
-    );
-};
+  const response = useStaticQuery(getFeaturedTours);
+//   console.log(response)
 
-export default FeaturedTours;
+    const featuredTours = response.featuredTours.edges
+    console.log(featuredTours)
+
+  return (
+    <section className={styles.featuredTours}>
+      <TitleStyled title="popular" subtitle="tours" />
+      {featuredTours.map(({ node }) => {
+          return <Tour key={node.contentful_id} tour={node} />
+      })}
+      <Tour />
+      <AniLink fade to="/tours" className="btn-primary">
+        all tours
+      </AniLink>
+    </section>
+  )
+}
+
+export default FeaturedTours

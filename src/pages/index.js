@@ -7,6 +7,7 @@ import HeroStyled from "../components/HeroStyled/HeroStyled"
 import Banner from "../components/Banner/Banner"
 import About from "../components/About/About"
 import Services from "../components/Services/Services"
+import FeaturedTours from "../components/FeaturedTours/FeaturedTours"
 
 export default (props) => (
   <Layout>
@@ -22,6 +23,7 @@ export default (props) => (
     </HeroStyled>
     <About />
     <Services />
+    <FeaturedTours />
   </Layout>
 )
 
