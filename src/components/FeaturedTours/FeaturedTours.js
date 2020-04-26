@@ -29,19 +29,21 @@ const getFeaturedTours = graphql`
 `
 
 const FeaturedTours = () => {
-  const response = useStaticQuery(getFeaturedTours);
-//   console.log(response)
+  const response = useStaticQuery(getFeaturedTours)
+  //   console.log(response)
 
-    const featuredTours = response.featuredTours.edges
-    console.log(featuredTours)
+  const featuredTours = response.featuredTours.edges
+//   console.log(featuredTours)
 
   return (
     <section className={styles.featuredTours}>
       <TitleStyled title="popular" subtitle="tours" />
-      {featuredTours.map(({ node }) => {
+      <div className={styles.center}>
+        {featuredTours.map(({ node }) => {
+          //   console.log(node)
           return <Tour key={node.contentful_id} tour={node} />
-      })}
-      <Tour />
+        })}
+      </div>
       <AniLink fade to="/tours" className="btn-primary">
         all tours
       </AniLink>
