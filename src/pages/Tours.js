@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../components/Layout"
 import { graphql } from "gatsby"
 import HeroStyled from "../components/HeroStyled/HeroStyled"
+import Tours from "../components/Tours/Tours"
 
 const tours = (props) => {
   return (
@@ -10,6 +11,7 @@ const tours = (props) => {
         img={props.data.backgroundImage.childImageSharp.fluid}
         fullSize="false"
       />
+      <Tours />
     </Layout>
   )
 }
