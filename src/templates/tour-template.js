@@ -2,8 +2,26 @@ import React from "react"
 import { graphql } from "gatsby"
 
 const Template = ({data}) => {
+    // console.log(props.data.tour.name)
 
-return <h1>{data.tour.name}</h1>
+    // destructuring data.tour
+    const {
+        name, 
+        price, 
+        country, 
+        days, 
+        description: {description}, 
+        images, 
+        start, 
+        journey,
+    } = data.tour
+
+    // first image and then the rest
+    const [mainImage, ...tourImages] = images
+    console.log(mainImage)
+    console.log(tourImages)
+
+    return <h1>{name}</h1>
 }
 
 //page query and $slug variable name has to be exactly same in gatsby-node.js context section
