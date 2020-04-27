@@ -42,18 +42,18 @@ const Template = ({ data }) => {
           <div className={styles.info}>
             <p>
               <FaMoneyBillWave className={styles.icon} />
-              starting from ${price}
+              starting from {price}€
             </p>
             <p>
-              <FaMap className={styles.icon} />${country}
+              <FaMap className={styles.icon} />{country}
             </p>
             <h4>starts on : {start}</h4>
-            <h4>duration : {days}</h4>
+            <h4>duration : {days} days</h4>
             <p className={styles.desc}>{description}</p>
-            <h2>daily schedule</h2>
             <div className={styles.journey}>
+            <h2>daily schedule</h2>
               {journey.map((item, index) => {
-                return <Day key={index} day={item.day} info={item} />
+                return <Day key={index} day={item.day} info={item.info} />
               })}
             </div>
           </div>
