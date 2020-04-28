@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../components/Layout"
 import { graphql } from 'gatsby'
 import HeroStyled from '../components/HeroStyled/HeroStyled'
+import BlogList from '../components/Blog/BlogList'
 
 const blog = ({ data }) => {
     // console.log(props)
@@ -14,6 +15,7 @@ const blog = ({ data }) => {
         img={data.backgroundImage.childImageSharp.fluid}
         fullSize="false"
       />
+      <BlogList />
     </Layout>
   )
 }
