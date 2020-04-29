@@ -2,7 +2,7 @@ import React from "react"
 import BlogCard from "./BlogCard"
 import TitleStyled from "../TitleStyled/TitleStyled"
 import { useStaticQuery, graphql } from "gatsby"
-import styles from "./blog.module.css"
+import styles from "./blog-list.module.css"
 
 // it is sorted by published date however we wouldnt have pubslished field, contentful provides createdAt field that we could use.
 
@@ -32,7 +32,7 @@ const BlogList = () => {
     // console.log(data.posts);
 
     const { posts:{edges}} = useStaticQuery(getPosts)
-    console.log(edges)
+    // console.log(edges)
 
     
   return (
