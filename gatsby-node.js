@@ -1,4 +1,4 @@
-const path =require("path");
+const path = require("path")
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
@@ -12,16 +12,34 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
+
+      posts: allContentfulPost {
+        edges {
+          node {
+            slug
+          }
+        }
+      }
     }
   `)
 
-  data.tours.edges.forEach(({node})=>{
-      createPage({
-          path: `tours/${node.slug}`,
-          component: path.resolve("./src/templates/tour-template.js"),
-          context:{
-              slug: node.slug,
-          }
-      })
+  data.tours.edges.forEach(({ node }) => {
+    createPage({
+      path: `tours/${node.slug}`,
+      component: path.resolve("./src/templates/tour-template.js"),
+      context: {
+        slug: node.slug,
+      },
+    })
+  })
+
+  data.posts.edges.forEach(({ node }) => {
+    createPage({
+      path: `blog/${node.slug}`,
+      component: path.resolve("./src/templates/blog-template.js"),
+      context: {
+        slug: node.slug,
+      },
+    })
   })
 }

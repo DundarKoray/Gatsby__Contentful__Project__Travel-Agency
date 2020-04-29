@@ -2,13 +2,13 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import HeroStyled from "../components/HeroStyled/HeroStyled"
-import styles from "./template.module.css"
+import styles from "./tour-template.module.css"
 import Image from "gatsby-image"
 import { FaMoneyBillWave, FaMap } from "react-icons/fa"
 import DailyPlan from "../components/SingleTour/DailyPlan"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
-const Template = ({ data }) => {
+const TourTemplate = ({ data }) => {
   // console.log(props.data.tour.name)
 
   // destructuring data.tour
@@ -92,4 +92,4 @@ export const query = graphql`
   }
 `
 
-export default Template
+export default TourTemplate
