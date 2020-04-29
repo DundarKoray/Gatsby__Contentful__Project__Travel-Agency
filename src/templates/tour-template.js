@@ -5,7 +5,7 @@ import HeroStyled from "../components/HeroStyled/HeroStyled"
 import styles from "./template.module.css"
 import Image from "gatsby-image"
 import { FaMoneyBillWave, FaMap } from "react-icons/fa"
-import Day from "../components/SingleTour/Day"
+import DailyPlan from "../components/SingleTour/DailyPlan"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 const Template = ({ data }) => {
@@ -53,7 +53,7 @@ const Template = ({ data }) => {
             <div className={styles.journey}>
             <h2>daily schedule</h2>
               {journey.map((item, index) => {
-                return <Day key={index} day={item.day} info={item.info} />
+                return <DailyPlan key={index} day={item.day} info={item.info} />
               })}
             </div>
           </div>

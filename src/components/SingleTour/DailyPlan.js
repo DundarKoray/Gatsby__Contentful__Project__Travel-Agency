@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { FaAngleDown } from "react-icons/fa"
 import styles from "./day.module.css"
 
-const Day = props => {
+const DailyPlan = props => {
     console.log(props)
 
   const [showInfo, setInfo] = useState(false)
@@ -26,4 +26,4 @@ const Day = props => {
   )
 }
 
-export default Day
+export default DailyPlan
