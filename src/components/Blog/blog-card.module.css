@@ -13,6 +13,7 @@
 }
 .img {
   transition: var(--mainTransition);
+  height: 13rem;
 }
 .img-container:hover .img {
   opacity: 0.3;
