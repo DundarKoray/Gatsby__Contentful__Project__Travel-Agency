@@ -28,16 +28,18 @@ const BlogTemplate = ({ data }) => {
           },
           "embedded-entry-block": (node) => {
               console.log(node.data.target.fields)
-            const {name, images, text} = node.data.target.fields
+            const {name, images, description} = node.data.target.fields
 
+            // below: cannot render the image and text 
               return (
                   <div>
                       <h1 style={{textTransform: 'capitalize'}}>Similar Post: {name["en-US"]}</h1>
-                      <img width="400" src={images['en-US'].fields.file['en-US'].url} alt="" />
+                      {/* <img width="400" src={images['en-US'].fields.file['en-US'].url} alt="" /> */}
+                      {/* {documentToReactComponents(description["en-US"])} */}
                   </div>
               )
-          }
-      }
+          },
+      },
   }
   return (
     <Layout>
