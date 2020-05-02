@@ -44,7 +44,7 @@ exports.createPages = async ({ graphql, actions }) => {
   })
 
   // amount of posts
-  const post = data.posts.edges;
+  const posts = data.posts.edges;
 
   // post per page
   const postPerPage = 3;
