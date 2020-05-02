@@ -34,8 +34,8 @@ const BlogTemplate = ({ data }) => {
               return (
                   <div>
                       <h1 style={{textTransform: 'capitalize'}}>Similar Post: {name["en-US"]}</h1>
-                      {/* <img width="400" src={images['en-US'].fields.file['en-US'].url} alt="" /> */}
-                      {/* {documentToReactComponents(description["en-US"])} */}
+                      <img width="400" src={images['en-US'].fields.file['en-US'].url} alt="" /> */}
+                      {documentToReactComponents(description["en-US"])}
                   </div>
               )
           },
