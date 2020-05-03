@@ -19,7 +19,7 @@ const getFeaturedTours = graphql`
           start
           images {
             fluid {
-              ...GatsbyContentfulFluid_tracedSVG
+              ...GatsbyContentfulFluid
             }
           }
         }

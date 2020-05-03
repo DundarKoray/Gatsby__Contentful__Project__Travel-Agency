@@ -12,7 +12,7 @@ import SEO from "../components/SEO/SEO"
 
 export default (props) => (
   <Layout>
-    <SEO title="home" description="we offer exciting tours in TURKIYE!" />
+    <SEO title="Home" description="we offer exciting tours in TURKIYE!" />
     <HeroStyled fullSize="true" img={props.data.backgroundImage.childImageSharp.fluid}>
       <Banner
         title="continue exploring"

@@ -1,14 +1,37 @@
-import React from 'react';
-import { Helmet } from 'react-helmet';
-import { useStaticQuery, graphql } from 'gatsby';
+import React from "react"
+import { Helmet } from "react-helmet"
+import { useStaticQuery, graphql } from "gatsby"
+
+const getData = graphql`
+  query {
+    site {
+      siteMetadata {
+        siteTitle: title
+        siteDesc: description
+        author
+        siteUrl
+        image
+        twitterUsername
+      }
+    }
+  }
+`
 
 const SEO = ({ title, description }) => {
+    const {site} = useStaticQuery(getData)
+    // console.log(data.site)
+    // console.log(site)
+
+    const {siteDesc, siteTitle, siteUrl, image, twitterUseramen} = site.siteMetadata
+    
+    //if description is not provided as props then siteDesc will showup
     return (
-        <Helmet htmlAttributes={{lang:'en'}} title={title}>
-            <meta name="description" content={description} />
+    <Helmet htmlAttributes={{ lang: "en" }} title={`${title} | ${siteTitle}`}>
+    
+      <meta name="description" content={description || siteDesc} />
+      <meta name="image" content={image} />
+    </Helmet>
+  )
+}
 
-        </Helmet>
-    );
-};
-
-export default SEO;
+export default SEO
