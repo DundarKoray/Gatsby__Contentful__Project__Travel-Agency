@@ -8,6 +8,9 @@ module.exports = {
     description:
       "Explore awesome worldwide tours & discover what makes each of them unique. Forget your daily routine & say yes to adventure",
     author: "@koraydundar",
+    twitterUsername: 'koray',
+    image: './static/defaultBcg.jpeg',
+    siteUrl: 'https://travel-agency-koray.netlify.app',
   },
   plugins: [
     {
