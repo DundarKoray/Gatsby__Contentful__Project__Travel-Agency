@@ -22,7 +22,7 @@ const SEO = ({ title, description }) => {
     // console.log(data.site)
     // console.log(site)
 
-    const {siteDesc, siteTitle, siteUrl, image, twitterUseramen} = site.siteMetadata
+    const {siteDesc, siteTitle, siteUrl, image, twitterUsername} = site.siteMetadata
     
     //if description is not provided as props then siteDesc will showup
     return (
