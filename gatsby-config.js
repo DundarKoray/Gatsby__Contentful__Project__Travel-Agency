@@ -8,8 +8,8 @@ module.exports = {
     description:
       "Explore awesome worldwide tours & discover what makes each of them unique. Forget your daily routine & say yes to adventure",
     author: "@koraydundar",
-    twitterUsername: 'koray',
-    image: './static/defaultBcg.jpeg',
+    twitterUsername: '@koray',
+    image: '/defaultBcg.jpeg',
     siteUrl: 'https://travel-agency-koray.netlify.app',
   },
   plugins: [
@@ -31,7 +31,7 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`, 
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-transition-link`
+    `gatsby-plugin-transition-link`,
     `gatsby-plugin-react-helmet`
   ],
 }
