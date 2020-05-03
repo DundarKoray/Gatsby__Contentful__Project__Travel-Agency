@@ -8,9 +8,11 @@ import Banner from "../components/Banner/Banner"
 import About from "../components/About/About"
 import Services from "../components/Services/Services"
 import FeaturedTours from "../components/FeaturedTours/FeaturedTours"
+import SEO from "../components/SEO/SEO"
 
 export default (props) => (
   <Layout>
+    <SEO title="home" description="we offer exciting tours in TURKIYE!" />
     <HeroStyled fullSize="true" img={props.data.backgroundImage.childImageSharp.fluid}>
       <Banner
         title="continue exploring"
