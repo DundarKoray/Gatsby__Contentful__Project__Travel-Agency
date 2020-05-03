@@ -3,6 +3,7 @@ import Layout from '../components/Layout'
 // import { Link } from 'gatsby'
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import Banner from '../components/Banner/Banner'
+import SEO from '../components/SEO/SEO'
 
 const error = () => {
     const style = {
@@ -14,6 +15,7 @@ const error = () => {
     }
     return (
         <Layout>
+            <SEO title="Error" />
             <header style={style}>
                 <Banner title="Oops it's a dead end">
                     <AniLink fade className="btn-white" to="/">Back to home page</AniLink>

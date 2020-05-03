@@ -5,6 +5,8 @@ import AniLink from "gatsby-plugin-transition-link/AniLink"
 import styles from "../components/Blog/blog-list.module.css"
 import BlogCard from "../components/Blog/BlogCard"
 import TitleStyled from "../components/TitleStyled/TitleStyled"
+import SEO from '../components/SEO/SEO'
+
 
 const BlogPaginationTemplate = props => {
   const { currentPage, numPages } = props.pageContext
@@ -19,6 +21,7 @@ const BlogPaginationTemplate = props => {
 
   return (
     <Layout>
+      <SEO title="Blogs" />
       <section className={styles.blog}>
         <TitleStyled title="latest" subtitle="posts" />
         <div className={styles.center}>

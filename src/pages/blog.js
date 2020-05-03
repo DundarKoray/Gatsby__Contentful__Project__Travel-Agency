@@ -3,6 +3,8 @@ import Layout from "../components/Layout"
 import { graphql } from 'gatsby'
 import HeroStyled from '../components/HeroStyled/HeroStyled'
 import BlogList from '../components/Blog/BlogList'
+import SEO from '../components/SEO/SEO'
+
 
 const blog = ({ data }) => {
     // console.log(props)
@@ -11,6 +13,7 @@ const blog = ({ data }) => {
 
   return (
     <Layout>
+      <SEO title="Blog" />
       <HeroStyled
         img={data.backgroundImage.childImageSharp.fluid}
         fullSize="false"

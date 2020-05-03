@@ -4,6 +4,8 @@ import Layout from "../components/Layout"
 import styles from "./tour-template.module.css"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import SEO from '../components/SEO/SEO'
+
 
 const BlogTemplate = ({ data }) => {
   //   console.log(props.data)
@@ -43,6 +45,7 @@ const BlogTemplate = ({ data }) => {
   }
   return (
     <Layout>
+      <SEO title={title} />
       <section className={styles.blog}>
         <div className={styles.center}>
           <h1 style={{textTransform: "capitalize"}}>{title}</h1>
